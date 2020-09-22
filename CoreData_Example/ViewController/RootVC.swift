@@ -55,6 +55,11 @@ class RootVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     initView()
+    
+    
+//    dbService.step1()
+//    dbService.step2()
+//    dbService.step3()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -148,7 +153,7 @@ class RootVC: UIViewController {
   private func toAdd(_ text: String) {
     
     guard let user = self.udService.name else {return}
-    self.dbService.addMessage(user: user, text: text)
+    self.dbService.addMsg(user: user, text: text)
     self.loadData()
   }
 }
